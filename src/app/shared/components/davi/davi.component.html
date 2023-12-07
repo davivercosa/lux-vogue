@@ -1,0 +1,20 @@
+<div (mouseenter)="showDavi()" (mouseleave)="hideDavi()" class="davi">
+  <div
+    class="davi_overlay"
+    [ngClass]="{
+      z_index_1: zIndexOverlayDavi
+    }"
+  ></div>
+  <div
+    class="flex justify-content-center align-items-center davi_nome"
+    [ngClass]="{
+      z_index_1: zIndexDavi
+    }"
+  >
+    <div>&copy; Davi Verçosa</div>
+    <img
+      src="../../../assets/images/davivercosa.png"
+      alt="Davi Verçosa Ícone"
+    />
+  </div>
+</div>

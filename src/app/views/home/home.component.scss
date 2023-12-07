@@ -1,0 +1,137 @@
+:host ::ng-deep {
+  .p-megamenu-horizontal .p-megamenu-root-list {
+    justify-content: space-between;
+  }
+
+  .p-divider-content {
+    background-color: transparent;
+  }
+
+  .p-inputtext {
+    background-color: transparent !important;
+  }
+}
+
+.home {
+  .button {
+    background-color: #f9fafb;
+    border-radius: 1em;
+    color: #333333;
+    cursor: pointer;
+    padding: 1.2rem;
+    transition: ease all 0.7s;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .button_secondary {
+    background-color: #333333;
+    border-radius: 1em;
+    color: #f9fafb;
+    cursor: pointer;
+    padding: 1.2rem;
+    transition: ease all 0.7s;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.send-card {
+  color: #33333387;
+  transition: ease all 0.7s;
+  cursor: pointer;
+}
+
+.send-card:hover {
+  color: #333333;
+}
+
+.card {
+  transition: all ease 0.7s;
+  border-radius: 0.8em;
+
+  width: calc(100% / 3);
+
+  &:hover {
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 100% !important;
+    padding: 1em !important;
+  }
+
+  .menu-mega {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .button_wrapper {
+    width: 100% !important;
+  }
+
+  .button {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button_secondary {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card_container {
+    gap: 1em !important;
+  }
+
+  .prada_container {
+    margin: 0 !important;
+    gap: 1em;
+  }
+
+  .prada_content {
+    width: 100% !important;
+    gap: 1.5em !important;
+  }
+
+  .teste {
+    max-width: 300px !important;
+  }
+
+  .prada_button {
+    width: 100% !important;
+    background-color: #333333;
+    border-radius: 1em;
+    color: #f9fafb;
+    cursor: pointer;
+    padding: 0.5em 1.2rem;
+  }
+
+  .content_news {
+    text-align: center !important;
+  }
+
+  .prada_button2 {
+    width: 50% !important;
+    background-color: #333333;
+    border-radius: 1em;
+    color: #f9fafb;
+    cursor: pointer;
+    padding: 0.5em 1.2rem;
+  }
+
+  .last {
+    height: 100% !important;
+    gap: 2em;
+  }
+}

@@ -1,0 +1,349 @@
+<div class="home flex flex-column gap-4">
+  <div class="flex align-items-center justify-content-between gap-4 menu-mega">
+    <div style="width: 90%">
+      <p-megaMenu [model]="items"></p-megaMenu>
+    </div>
+    <div class="flex align-items-center gap-2 button_wrapper">
+      <div class="button">Marcas</div>
+      <div class="button_secondary">Ofertas</div>
+    </div>
+  </div>
+
+  <div class="banner" style="position: relative">
+    <img
+      src="../../../assets/images/6.jpg"
+      alt=""
+      style="width: 100%; height: 50vh; object-fit: cover"
+    />
+    <div
+      style="
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div style="font-size: 3em; font-weight: 100; position: absolute">
+        Refinando Estilo <br />
+        Definindo Elegância
+      </div>
+    </div>
+    <div
+      class="overlay"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: #333333c0;
+      "
+    ></div>
+  </div>
+
+  <p-divider align="right">
+    <span style="color: #33333387">L.V</span>
+  </p-divider>
+
+  <div
+    class=""
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5em;
+    "
+  >
+    <div style="font-size: 1.6em; color: #333333">Ofertas</div>
+    <div class="flex justify-content-center flex-wrap card_container">
+      <div *ngFor="let product of products" class="card p-6">
+        <div class="flex flex-column gap-4">
+          <div class="header flex align-items-center justify-content-between">
+            <div
+              class="tag"
+              style="
+                background-color: #f9fafb;
+                color: #333333;
+                font-size: 0.75rem;
+                padding: 0.25rem 0.4rem;
+                border-radius: 6px;
+              "
+            >
+              {{ product.stock }}
+            </div>
+            <i class="pi pi-send send-card"></i>
+          </div>
+          <div class="content flex flex-column gap-4">
+            <div class="img" style="position: relative">
+              <img
+                src="{{ product.src }}"
+                alt="{{ product.alt }}"
+                style="width: 100%; height: 250px; object-fit: cover"
+              />
+              <div
+                class="overlay"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 250px;
+                  background: #33333387;
+                "
+              ></div>
+            </div>
+            <div class="content-content flex flex-column gap-2">
+              <div class="title" style="font-size: 1.3em; color: #333333">
+                {{ product.title }}
+              </div>
+              <div class="subtitle" style="color: #33333387; font-size: 0.8rem">
+                {{ product.content }}
+              </div>
+              <div class="stars">
+                <p-rating [cancel]="false"></p-rating>
+              </div>
+            </div>
+            <div class="price flex flex-column gap-2 align-items-center">
+              <div
+                style="
+                  border-radius: 1em;
+                  background-color: #333333;
+                  color: #f9fafb;
+                  padding: 0.5em;
+                  width: 90%;
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+                class="gap-2"
+              >
+                <div>Detalhes</div>
+                <!-- <i class="pi pi-info"></i> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-wrap align-items-center justify-content-around mt-6 mb-6 prada_container"
+  >
+    <div style="height: 90vh; position: relative" class="">
+      <img
+        src="../../../assets/images/banner4.jpg"
+        alt=""
+        style="height: 90vh; object-fit: cover"
+        class="teste"
+      />
+      <div
+        class="overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 90vh;
+          background: #33333387;
+        "
+      ></div>
+    </div>
+    <div class="flex flex-column gap-6 prada_content" style="width: 40%">
+      <div style="color: #33333387">
+        Conheça <span style="color: black">KATAKANA</span>
+      </div>
+      <div style="color: #33333387">
+        irradia <span style="color: black">empoderamento</span> com uma presença
+        marcante e confiante. Seu olhar determinado e postura refletem uma
+        autoestima inabalável. Vestindo uma deslumbrante peça da
+        <span style="color: black">Prada</span>.
+      </div>
+      <div style="color: #33333387">
+        a combinação de <span style="color: black">elegância</span> e
+        <span style="color: black">estilo</span> transmite um poder intrínseco
+      </div>
+      <div style="color: #33333387">
+        A roupa destaca não apenas a
+        <span style="color: black">sofisticação</span> da marca, mas também a
+        força e autenticidade da modelo. Uma fusão de moda e empoderamento, essa
+        imagem captura a essência moderna e ousada, destacando a influência da
+        moda na expressão individual e autoconfiança da
+        <span style="color: black">mulher contemporânea</span>
+      </div>
+      <div
+        class="prada_button"
+        style="
+          display: flex;
+          width: 15%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        conhecer
+      </div>
+    </div>
+  </div>
+
+  <p-divider align="right">
+    <span style="color: #33333387">L.V</span>
+  </p-divider>
+
+  <div class="flex flex-column align-items-center justify-content-center gap-4">
+    <div style="font-size: 1.3em">LuxVogue News</div>
+    <div style="color: #33333387; font-size: 0.8rem" class="content_news">
+      Inscreva-se em nossa newsletter e receba as novidades e promoções
+      antecipadamente
+    </div>
+    <div
+      class="flex gap-2 align-items-center justify-content-center flex-wrap"
+      style="width: 100%"
+    >
+      <span class="p-float-label">
+        <input pInputText id="e-mail" />
+        <label htmlFor="e-mail">e-mail</label>
+      </span>
+      <div
+        class="prada_button2"
+        style="
+          display: flex;
+          width: 15%;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        inscrever-se
+      </div>
+    </div>
+  </div>
+
+  <p-divider align="right">
+    <span style="color: #33333387">L.V</span>
+  </p-divider>
+
+  <div
+    class="flex align-items-center justify-content-around mt-6 mb-6 flex-wrap prada_container"
+  >
+    <div class="flex flex-column gap-4 prada_content" style="width: 40%">
+      <div>
+        <div style="color: #33333387">LuxVogue</div>
+        <div style="font-size: 1.3em">sobre nós</div>
+      </div>
+      <div style="color: #33333387">
+        personifica a essência da elegância e sofisticação no universo da moda,
+        estabelecendo-se como uma marca de roupa do mais alto padrão. Cada peça
+        é cuidadosamente selecionada, refletindo um comprometimento incomparável
+        com a qualidade e o design refinado.
+      </div>
+      <div style="color: #33333387">
+        Nossa abordagem é mais do que simplesmente vestir; é uma curadoria
+        minuciosa que transcende o tempo, incorporando o luxo em cada detalhe.
+        Na LuxVogue, a moda é uma expressão de identidade e excelência, e nossas
+        coleções são a personificação da beleza atemporal, concebidas para
+        inspirar confiança e destacar a individualidade em um cenário de moda de
+        classe mundial.
+      </div>
+    </div>
+    <div style="height: 90vh; position: relative">
+      <img
+        src="../../../assets/images/teste.jpg"
+        alt=""
+        style="height: 90vh; object-fit: cover"
+        class="teste"
+      />
+      <div
+        class="overlay"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 90vh;
+          background: #33333387;
+        "
+      ></div>
+    </div>
+  </div>
+
+  <div class="">
+    <p-carousel
+      [value]="brands"
+      [numVisible]="3"
+      [numScroll]="3"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-brand pTemplate="item">
+        <div
+          class="border-1 surface-border border-round m-2 text-center py-5 px-3"
+        >
+          <img
+            src="{{ '../../../assets/images/' + brand.src }}"
+            alt="{{ brand.nome }}"
+            class="img-carousel"
+          />
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <div class="banner" style="position: relative">
+    <img
+      src="../../../assets/images/banner.jpg"
+      alt=""
+      style="width: 100%; height: 20vh; object-fit: cover"
+    />
+    <div
+      class="overlay"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        background: #33333387;
+      "
+    ></div>
+  </div>
+
+  <p-divider align="right" class="mt-6">
+    <span style="color: #33333387">L.V</span>
+  </p-divider>
+
+  <div
+    class="flex justify-content-around align-items-center flex-wrap last"
+    style="height: 20vh"
+  >
+    <div
+      class="flex flex-column gap-4 align-items-center justify-content-center"
+    >
+      <i class="pi pi-check-square"></i>
+      <div style="color: #33333387">Frete grátis para todo Brasil</div>
+    </div>
+    <div
+      class="flex flex-column gap-4 align-items-center justify-content-center"
+    >
+      <i class="pi pi-check-square"></i>
+      <div style="color: #33333387">100% de satisfação</div>
+    </div>
+    <div
+      class="flex flex-column gap-4 align-items-center justify-content-center"
+    >
+      <i class="pi pi-check-square"></i>
+      <div style="color: #33333387">Suporte de alto nível</div>
+    </div>
+    <div
+      class="flex flex-column gap-4 align-items-center justify-content-center"
+    >
+      <i class="pi pi-check-square"></i>
+      <div style="color: #33333387">Pagamento seguro</div>
+    </div>
+  </div>
+</div>
